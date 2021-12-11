@@ -1,6 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "asem.h"
+#include "shm.h"
+
+typedef struct {
+    int m;
+    asem_t occupe;
+    int t;
+
+}box;
 
 int main (int argc, char *argv []) {
     
@@ -11,7 +19,7 @@ int main (int argc, char *argv []) {
         exit(EXIT_FAILURE);
     }
 
-    (void) argv ;
+
 
     adebug(0,"usage: ./medecin");
     exit(EXIT_FAILURE);
